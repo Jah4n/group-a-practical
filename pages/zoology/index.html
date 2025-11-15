@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/sub.css">
+  <title>Zoology Practicals</title>
+</head>
+
+<body>
+
+  <!-- Off-Canvas Menu Trigger Button -->
+  <button id="menu-toggle" class="menu-toggle">☰</button>
+
+  <!-- Off-Canvas Menu -->
+  <nav id="offcanvas-menu" class="offcanvas-menu">
+    <button id="menu-close" class="menu-close">✕</button>
+    <ul>
+      <li class="home"><a href="/../../">Home</a></li>
+      <li><a href="/pages/zoology">Zoology</a></li>
+      <li><a href="/pages/botany">Botany</a></li>
+      <li><a href="/pages/physics">Physics</a></li>
+      <li><a href="/pages/chemistry">Chemistry</a></li>
+      <li><a href="/pages/math">Math</a></li>
+      <li><a href="/pages/ict">ICT</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div class="container">
+    <header>
+      <h1>Zoology Practicals</h1>
+    </header>
+
+    <div class="all-practical">
+      <div class="card">
+        <div class="card-header" style="justify-content: center;">
+          <div class="title">All Practicals</div>
+        </div>
+        <div class="topics">
+          <!-- <div class="topics-title">All Practicals:</div>
+          <ul class="topics-list">
+            <li class="topic done">1. রসায়ন পরীক্ষাগারে ব্যবহৃত যন্ত্রপাতি পরিচিতি</li>
+            <li class="topic done">2. ক্যালরিমিতি পদ্ধতিতে অক্সালিক অ্যাসিডের দ্রবণ তাপ নির্ণয়</li>
+            <li class="topic">3. অজানা লবণের ক্ষারীয় ও অম্লীয় মূলক সনাক্তকরণ</li>
+          </ul> -->
+
+          <p class="empty">Akhono koray nai 🙂</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="practical-header">
+      <h2>Practicals Covered</h2>
+    </div>
+
+    <div class="cards-container">
+      <!-- Dynamically -->
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <p>&copy; Developed & Maintained by <span>JAHAN</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/../../app.js"></script>
+
+  <script type="module">
+    import { data } from '/data/zoology.js';
+    renderCards(data);
+  </script>
+
+</body>
+</html>
