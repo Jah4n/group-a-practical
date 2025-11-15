@@ -381,6 +381,7 @@ footer {
   margin-left: 10px;
   text-align: center;
   background: transparent;
+  text-decoration: none;
   /* Transparent background */
   z-index: 1;
 }

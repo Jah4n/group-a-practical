@@ -152,6 +152,7 @@ footer {
   color: #ffffff;
   margin-left: 10px;
   text-align: center;
+  text-decoration: none;
   background: transparent;
   /* Transparent background */
   z-index: 1;
