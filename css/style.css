@@ -136,11 +136,64 @@ header {
 
 /* Footer */
 footer {
-  background-image: linear-gradient( 69.2deg,  rgb(34, 98, 200) 35.3%, rgb(154, 22, 201) 100.3% );
+  background-image: linear-gradient(69.2deg, rgb(34, 98, 200) 35.3%, rgb(154, 22, 201) 100.3%);
   color: white;
   padding: 2rem 0;
   text-align: center;
   margin: 100px 0 0 0;
+}
+
+.pill-border {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  background: transparent;
+  /* Transparent background */
+  z-index: 1;
+}
+
+/* Animated gradient border */
+.pill-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 4px solid transparent;
+  background: linear-gradient(45deg,
+      #ff0000, #ff7300, #fffb00,
+      #48ff00, #00ffd5, #002bff,
+      #7a00ff, #ff00c8, #ff0000) border-box;
+  background-size: 400%;
+  border-radius: 100px;
+  z-index: -1;
+  animation: animate-border 20s ease-in-out infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 4px;
+  /* Matches border width */
+}
+
+@keyframes animate-border {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* Animation */
